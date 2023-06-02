@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import mitakaVideo from "../../assets/mitaka-home-video.mp4";
 import { motion } from "framer-motion";
 import NavbarVariant from "./Framer";
 
 const Carousel = () => {
+	const [isLoading, setIsLoading] = useState(true);
+
+	const handleVideoLoad = () => {
+		setIsLoading(false);
+	};
 	const returnMessage = (message: string) => {
 		return (
 			<div className="flex flex-col items-center sm:ml-8 ss:ml-2 ss:pt-8 sm:pt-0">
@@ -52,10 +57,24 @@ const Carousel = () => {
 
 	return (
 		<div className="relative">
-			<video width="100%" className="" height="240px" autoPlay muted loop>
-				<source src={mitakaVideo} type="video/mp4" />
-				Your browser does not support the video tag.
-			</video>
+			{isLoading && (
+				<div className="flex justify-center items-center text-[68px] pt-[150px]">
+					Loading...
+				</div>
+			)}
+			<video
+				src={mitakaVideo}
+				width="100%"
+				className=""
+				height="240px"
+				onLoadedData={() => {
+					setIsLoading(false);
+				}}
+				autoPlay
+				muted
+				loop
+			/>
+
 			<div className="flex items-center sm:text-[20px] absolute ss:top-10 sm:top-0 left-0 text-white h-[150px] text-base bg-gray-500 bg-opacity-90 w-full">
 				{greeting()}
 			</div>
