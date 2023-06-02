@@ -10,7 +10,7 @@ const Solutions = () => {
 
 	return (
 		<div className="px-8 bg-[#f3f2f5]">
-			<h5 className="pt-4 text-4xl mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
+			<h5 className="sm:pt-4 ss:pt-10 text-4xl mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
 				Our Solutions{" "}
 			</h5>
 			<div className="flex flex-wrap justify-between mb-8">

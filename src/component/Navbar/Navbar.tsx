@@ -4,7 +4,7 @@ import logo from "../../assets/mitaka-logo-trans.png";
 
 const Navbar = () => {
 	return (
-		<div className="h-[150px]">
+		<div className="sm:h-[150px] ss:h-[130px]">
 			<nav className="bg-gradient-to-r from-[#000000] to-[#c89116] dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between">
 					<Link to={"/"} className="flex items-start">
@@ -19,14 +19,14 @@ const Navbar = () => {
 					<div className="flex md:order-2">
 						<button
 							type="button"
-							className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white lg:font-semibold sm:font-medium py-2 px-4 rounded"
+							className="bg-gradient-to-r from-[#52462d] sm:block ss:hidden to-blue-900 h-[50px] hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white lg:font-semibold sm:font-medium py-2 px-4 rounded"
 						>
 							Get a Quote
 						</button>
 						<button
 							data-collapse-toggle="navbar-sticky"
 							type="button"
-							className="inline-flex items-center p-2 text-sm text-[white] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+							className="inline-flex items-center p-2 text-sm text-[black] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
 							aria-controls="navbar-sticky"
 							aria-expanded="false"
 						>
@@ -47,7 +47,7 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div
-						className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+						className="items-center hidden w-full md:flex md:w-auto md:order-1"
 						id="navbar-sticky"
 					>
 						<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row sm:space-x-4 lg:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -95,7 +95,7 @@ const Navbar = () => {
 							<li>
 								<Link
 									to={"/contact"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									className="block py-2 pl-3 pr-4 md:mr-8 lg:mr-0 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 								>
 									Contact
 								</Link>

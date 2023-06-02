@@ -6,7 +6,7 @@ const Footer = () => {
 		<div>
 			<footer className="bg-gradient-to-r from-[#000000] to-[#c89116] dark:bg-gray-900">
 				<div className="mx-auto w-full max-w-screen-xl">
-					<div className="grid grid-cols-2 sm:gap-8 ss:gap-0 px-4 py-6 lg:py-8 md:grid-cols-4">
+					<div className="grid grid-cols-2 sm:gap-8 ss:gap-0 sm:pl-4 ss:pl-2 sm:pr-4 ss:pr-8 py-6 lg:py-8 md:grid-cols-4">
 						<div>
 							<h2 className="mb-6 text-sm font-semibold text-[white] uppercase dark:text-white">
 								Company
