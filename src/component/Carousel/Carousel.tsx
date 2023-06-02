@@ -20,7 +20,7 @@ const Carousel = () => {
 				>
 					{Array.from(`${message}`).map((word, i) => (
 						<motion.span
-							className="text-[#f9c151] lg:text-[24px]"
+							className="text-[white] lg:text-[24px]"
 							key={i}
 							variants={NavbarVariant.typingText}
 						>
