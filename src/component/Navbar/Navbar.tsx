@@ -3,12 +3,17 @@ import logo from "../../assets/mitaka-logo-trans.png";
 
 const Navbar = () => {
 	return (
-		<div className="">
+		<div className="h-[150px]">
 			<nav className="bg-gradient-to-r from-[#000000] to-[#c89116] dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-					<a href="#" className="flex items-center">
-						<img src={logo} className="h-36 mr-3" alt="Mitaka Logo" />
-						<span className="self-center lg:text-xl sm:text-base font-semibold whitespace-nowrap dark:text-white"></span>
+				<div className="max-w-screen-xl flex flex-wrap items-center justify-between">
+					<a href="#" className="flex items-start">
+						<img
+							src={logo}
+							className="lg:mr-12 md:mr-0"
+							alt="Mitaka Logo"
+							width="200px"
+						/>
+						{/* <span className="self-center lg:text-xl sm:text-base font-semibold whitespace-nowrap dark:text-white"></span> */}
 					</a>
 					<div className="flex md:order-2">
 						<button

@@ -4,3 +4,12 @@ export interface ButtonProps {
 	onClick?: () => void;
 	text: string;
 }
+
+export interface ButtonPropsSvg {
+	type: "button" | "submit" | "reset";
+	className?: string;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	text: string;
+	textTwo?: string | null;
+	condition?: boolean;
+}

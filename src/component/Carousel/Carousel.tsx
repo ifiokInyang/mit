@@ -6,7 +6,7 @@ import NavbarVariant from "./Framer";
 const Carousel = () => {
 	const returnMessage = (message: string) => {
 		return (
-			<div className="flex items-center">
+			<div className="flex flex-col items-center ml-8">
 				<motion.h4
 					className="text"
 					variants={NavbarVariant.typingContainer}
@@ -14,20 +14,20 @@ const Carousel = () => {
 					animate="show"
 				>
 					{Array.from(`${message}`).map((word, i) => (
-						<motion.span key={i} variants={NavbarVariant.typingText}>
+						<motion.span
+							className="text-[#f9c151] lg:text-[24px]"
+							key={i}
+							variants={NavbarVariant.typingText}
+						>
 							{word}
 						</motion.span>
 					))}
 				</motion.h4>
-				;
-				{/* <p className="lg:ml-16 lg:mr-8 md:ml-0 font-normal lg:text-[25px] text-[white] lg:w-[900px] text-center md:leading-10">
-          {message}
-        </p> */}
 				<button
 					type="button"
-					className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] lg:w-[150px] md:w-[200px] sm:hidden md:block my-4 ml-4 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
+					className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] w-[250px] sm:hidden md:block my-4 ml-4 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
 				>
-					Start Here!
+					Get an instant quote!
 				</button>
 			</div>
 		);
@@ -56,7 +56,7 @@ const Carousel = () => {
 				<source src={mitakaVideo} type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
-			<div className="flex items-center absolute top-0 left-0 text-white h-[100px] text-base bg-gray-500 bg-opacity-90 w-full">
+			<div className="flex items-center absolute top-0 left-0 text-white h-[150px] text-base bg-gray-500 bg-opacity-90 w-full">
 				{greeting()}
 			</div>
 		</div>
@@ -64,18 +64,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-{
-	/* <motion.p
-  className="text"
-  variants={NavbarVariant.typingContainer}
-  initial="hidden"
-  animate="show"
->
-  {Array.from('Coffee Nature').map((word, i) => (
-    <motion.span key={i} variants={NavbarVariant.typingText}>
-      {word}
-    </motion.span>
-  ))}
-</motion.p>; */
-}
