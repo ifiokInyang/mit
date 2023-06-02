@@ -58,12 +58,20 @@ const Carousel = () => {
 	return (
 		<div className="relative">
 			{isLoading && (
-				<div className="flex justify-center items-center text-[68px] pt-[150px]">
+				<div className="flex justify-center items-center md:text-[68px] sm:text-[32px] ss:text-[20px] sm:pt-[150px] ss:pt-[20px]">
 					Loading...
 				</div>
 			)}
+			{/* <video
+        src={mitakaVideo}
+        width="100%"
+        className=""
+        height="240px"
+        autoPlay
+        muted
+        loop
+      /> */}
 			<video
-				src={mitakaVideo}
 				width="100%"
 				className=""
 				height="240px"
@@ -73,8 +81,10 @@ const Carousel = () => {
 				autoPlay
 				muted
 				loop
-			/>
-
+			>
+				<source src={mitakaVideo} type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
 			<div className="flex items-center sm:text-[20px] absolute ss:top-10 sm:top-0 left-0 text-white h-[150px] text-base bg-gray-500 bg-opacity-90 w-full">
 				{greeting()}
 			</div>
