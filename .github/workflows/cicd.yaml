@@ -2,13 +2,13 @@ name: CI/CD
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    tags:
+      - 'v*'
+
 
 jobs:
-  build:
-    runs-on: ubuntu-22.04
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -18,33 +18,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+    # Run npm install and build on our code
+      - run: yarn install
+      - run: yarn build --if-present
 
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build project
-        run: yarn build
-      - name: Upload production-ready build files
+      - name: Deploy to netlify
         uses: actions/upload-artifact@v3
+        
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          name: production-files
-          path: ./dist
-
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-22.04
-    needs: build
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.SMEBUD_APP_SECRET_TOKEN }}
-          publish_dir: ./dist
+          args: deploy --dir=build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
 
     # - name: Run the tests and generate coverage report
     #   run: yarn test -- --coverage
