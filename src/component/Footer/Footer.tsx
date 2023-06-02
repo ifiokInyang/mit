@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -12,19 +13,19 @@ const Footer = () => {
 							</h2>
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"/about"} className="hover:underline text-[white]">
 										About
-									</a>
+									</Link>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Brand Center
-									</a>
+									</Link>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Blog
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -50,19 +51,19 @@ const Footer = () => {
 							</h2>
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Twitter
-									</a>
+									</Link>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Facebook
-									</a>
+									</Link>
 								</li>
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"/contact"} className="hover:underline text-[white]">
 										Contact Us
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -72,22 +73,22 @@ const Footer = () => {
 							</h2>
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Privacy Policy
-									</a>
+									</Link>
 								</li>
 
 								<li className="mb-4">
-									<a href="#" className="hover:underline text-[white]">
+									<Link to={"#"} className="hover:underline text-[white]">
 										Terms &amp; Conditions
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div className="px-4 py-6 dark:bg-gray-700 md:flex md:items-center md:justify-between">
 						<span className="text-sm text-[white] dark:text-gray-300 sm:text-center">
-							© 2023 <a href="/">MitakaTradeAfrica™</a>. All Rights Reserved.
+							© 2023 <Link to={"/"}>MitakaTradeAfrica™</Link>. All Rights Reserved.
 						</span>
 						<div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
 							<a

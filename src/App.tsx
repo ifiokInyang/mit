@@ -24,8 +24,8 @@ function AppRoutes() {
 				<Route path="/about" element={<About />} />
 				<Route path="/products" element={<Products />} />
 				<Route path="/services" element={<Services />} />
-      </Routes>
-      <Footer />
+			</Routes>
+			<Footer />
 		</React.Fragment>
 	);
 }
