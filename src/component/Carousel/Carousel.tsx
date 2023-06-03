@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 import mitakaVideo from "../../assets/mitaka-home-video.mp4";
 import { motion } from "framer-motion";
 import NavbarVariant from "./Framer";
+import ClipLoader from "react-spinners/ClipLoader";
+
+const override: CSSProperties = {
+	display: "block",
+	margin: "0 auto",
+	borderColor: "#0c1345",
+};
 
 const Carousel = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
-	const handleVideoLoad = () => {
-		setIsLoading(false);
-	};
 	const returnMessage = (message: string) => {
 		return (
 			<div className="flex flex-col items-center sm:ml-8 ss:ml-2 ss:pt-8 sm:pt-0">
@@ -59,7 +63,14 @@ const Carousel = () => {
 		<div className="relative">
 			{isLoading && (
 				<div className="flex justify-center items-center md:text-[68px] sm:text-[32px] ss:text-[20px] sm:pt-[150px] ss:pt-[20px]">
-					Loading...
+					<ClipLoader
+						color={"blue"}
+						loading={isLoading}
+						cssOverride={override}
+						size={50}
+						aria-label="Loading Spinner"
+						data-testid="loader"
+					/>
 				</div>
 			)}
 			{/* <video
