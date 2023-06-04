@@ -1,6 +1,7 @@
 import React from "react";
 import Benefits from "../../component/Benefits/Benefits";
 import Carousel from "../../component/Carousel/Carousel";
+import Chat from "../../component/Chat/Chat";
 import Footer from "../../component/Footer/Footer";
 import Navbar from "../../component/Navbar/Navbar";
 import Services from "../../component/Services/Services";
@@ -13,6 +14,7 @@ const Home = () => {
 			<Carousel />
 			<Solutions />
 			<Benefits />
+			<Chat />
 			{/* <Footer /> */}
 		</>
 	);
