@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
-import About from "./component/About/About";
-import Contacts from "./component/Contact/Contacts";
 import Footer from "./component/Footer/Footer";
-import Products from "./component/Products/Products";
-import Services from "./component/Services/Services";
-import Home from "./pages/Home/Home";
+import Chat from "./component/Chat/Chat";
+import { override } from "./utils/CSSProps/CssProps";
+import ClipLoader from "react-spinners/ClipLoader";
+
+const About = lazy(async () => await import("./component/About/About"));
+const Contacts = lazy(async () => await import("./component/Contact/Contacts"));
+const Products = lazy(
+	async () => await import("./component/Products/Products")
+);
+const Services = lazy(
+	async () => await import("./component/Services/Services")
+);
+const Home = lazy(async () => await import("./pages/Home/Home"));
 // import { Toaster } from "react-hot-toast";
 
 function AppRoutes() {
@@ -25,6 +33,7 @@ function AppRoutes() {
 				<Route path="/products" element={<Products />} />
 				<Route path="/services" element={<Services />} />
 			</Routes>
+			<Chat />
 			<Footer />
 		</React.Fragment>
 	);
@@ -33,8 +42,24 @@ function AppRoutes() {
 function App() {
 	return (
 		<BrowserRouter>
-			<AppRoutes />
+			<Suspense
+				fallback={
+					<div>
+						<ClipLoader
+							color={"blue"}
+							loading={true}
+							cssOverride={override}
+							size={100}
+							aria-label="Loading Spinner"
+							data-testid="loader"
+						/>
+					</div>
+				}
+			>
+				<AppRoutes />
+			</Suspense>
 		</BrowserRouter>
 	);
 }
+
 export default App;

@@ -1,14 +1,9 @@
-import React, { useState, CSSProperties } from "react";
+import React, { useState } from "react";
 import mitakaVideo from "../../assets/mitaka-home-video.mp4";
 import { motion } from "framer-motion";
 import NavbarVariant from "./Framer";
 import ClipLoader from "react-spinners/ClipLoader";
-
-const override: CSSProperties = {
-	display: "block",
-	margin: "0 auto",
-	borderColor: "#0c1345",
-};
+import { override } from "../../utils/CSSProps/CssProps";
 
 const Carousel = () => {
 	const [isLoading, setIsLoading] = useState(true);
