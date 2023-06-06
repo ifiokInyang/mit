@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import mitakaVideo from "../../assets/mitaka-home-video.mp4";
 import { motion } from "framer-motion";
-import NavbarVariant from "./Framer";
+import NavbarVariant from "../FramerMotion/Framer";
 import ClipLoader from "react-spinners/ClipLoader";
 import { override } from "../../utils/CSSProps/CssProps";
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
 	const [isLoading, setIsLoading] = useState(true);
@@ -27,16 +28,18 @@ const Carousel = () => {
 						</motion.span>
 					))}
 				</motion.h4>
-				<button
-					type="button"
-					className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] w-[250px] sm:hidden md:block sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
-				>
-					Get an instant quote!
-				</button>
+				<Link to={"/quotation"}>
+					<button
+						type="button"
+						className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] w-[250px] sm:hidden md:block sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
+					>
+						Get an instant quote!
+					</button>
+				</Link>
 			</div>
 		);
 	};
-	const greeting = () => {
+	const greeting: () => JSX.Element = () => {
 		const currentHour = new Date().getHours();
 		const morningMessage =
 			"Good morning, Save 80% of your Power Cost with our high performance battery with nano carbon silica technology.";

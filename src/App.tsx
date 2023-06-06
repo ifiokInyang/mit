@@ -14,6 +14,8 @@ const Services = lazy(
 	async () => await import("./component/Services/Services")
 );
 const Home = lazy(async () => await import("./pages/Home/Home"));
+const Quotation = lazy(async () => await import("./pages/Quotation/Quotation"));
+
 // import { Toaster } from "react-hot-toast";
 
 function AppRoutes() {
@@ -32,9 +34,10 @@ function AppRoutes() {
 				<Route path="/about" element={<About />} />
 				<Route path="/products" element={<Products />} />
 				<Route path="/services" element={<Services />} />
+				<Route path="/quotation" element={<Quotation />} />
 			</Routes>
 			<Chat />
-			<Footer />
+			{/* <Footer /> */}
 		</React.Fragment>
 	);
 }
