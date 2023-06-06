@@ -75,10 +75,6 @@ const Quote = () => {
 				break;
 			}
 		}
-		console.log({
-			inverterCapacity,
-			numberOfBatteries,
-		});
 		return {
 			inverterCapacity,
 			numberOfBatteries,
