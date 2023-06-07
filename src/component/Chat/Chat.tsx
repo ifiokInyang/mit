@@ -17,7 +17,7 @@ const Chat = () => {
 						</div>
 					</div>
 					{/* Start live chat!! */}
-					<div className="md:w-[60px] ss:w-[80px] h-[60px] absolute top-2 left-4 border-2 border-green-800 rounded-full animate-ping"></div>
+					<div className="md:w-[60px] ss:w-[50px] md:h-[60px] ss:h-[50px] absolute md:top-2 ss:top-4 left-4 border-2 border-green-800 rounded-full animate-ping"></div>
 				</a>
 			</div>
 		</div>
