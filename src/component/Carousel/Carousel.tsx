@@ -28,7 +28,7 @@ const Carousel = () => {
 						</motion.span>
 					))}
 				</motion.h4>
-				<Link to={"/quotation"}>
+				<Link to={"#"}>
 					<button
 						type="button"
 						className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] w-[250px] sm:hidden md:block sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"

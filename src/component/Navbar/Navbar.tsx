@@ -20,7 +20,7 @@ const Navbar = () => {
 					</Link>
 					<div className="flex md:order-2">
 						{location.pathname === "/" ? (
-							<Link to={"/quotation"}>
+							<Link to={"#"}>
 								<button
 									type="button"
 									className="bg-gradient-to-r from-[#52462d] sm:block ss:hidden to-blue-900 h-[50px] hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white lg:font-semibold sm:font-medium py-2 px-4 rounded"
