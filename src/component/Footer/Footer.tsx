@@ -41,8 +41,8 @@ const Footer = () => {
 									+234 913 612 6191 <br /> +234 803 838 4141 <br />
 									+44 7533 371 203
 								</li>
-								<li className="mb-4 md:text-lg sm:text-sm ss:text-[14px] text-[white]">
-									info@mitakaafrica.com
+								<li className="mb-4 md:text-lg ss:text-[12px] text-[white]">
+									info@mitakatradeafrica.com
 								</li>
 							</ul>
 						</div>

@@ -5,6 +5,8 @@ import Chat from "./component/Chat/Chat";
 import { override } from "./utils/CSSProps/CssProps";
 import ClipLoader from "react-spinners/ClipLoader";
 
+const Chart = lazy(async () => await import("./pages/Chart/Chart"));
+
 const About = lazy(async () => await import("./component/About/About"));
 const Contacts = lazy(async () => await import("./component/Contact/Contacts"));
 const Products = lazy(
@@ -34,6 +36,8 @@ function AppRoutes() {
 				<Route path="/about" element={<About />} />
 				<Route path="/products" element={<Products />} />
 				<Route path="/services" element={<Services />} />
+				<Route path="/chart" element={<Chart />} />
+
 				<Route path="/quotation" element={<Quotation />} />
 			</Routes>
 			<Chat />

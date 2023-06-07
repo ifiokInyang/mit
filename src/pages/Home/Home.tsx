@@ -1,4 +1,5 @@
 import React from "react";
+import Announcement from "../../component/Announcement/Announcement";
 import Benefits from "../../component/Benefits/Benefits";
 import Carousel from "../../component/Carousel/Carousel";
 import Chat from "../../component/Chat/Chat";
@@ -11,6 +12,7 @@ import Solutions from "../../component/Solutions/Solutions";
 const Home = () => {
 	return (
 		<>
+			<Announcement />
 			<Navbar />
 			<Carousel />
 			<Solutions />

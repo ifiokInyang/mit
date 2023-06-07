@@ -58,7 +58,7 @@ const Partners = () => {
 				</motion.h4>
 			</div>
 			<div
-				className="flex flex-wrap justify-around align-center my-12 md:h-[400px] ss:h-auto"
+				className="flex flex-wrap justify-around align-center my-12 lg:h-[500px] ss:h-auto"
 				ref={ref}
 			>
 				<motion.img
