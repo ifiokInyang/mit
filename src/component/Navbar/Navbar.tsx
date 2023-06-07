@@ -8,11 +8,11 @@ const Navbar = () => {
 	return (
 		<div className="sm:h-[150px] ss:h-[130px]">
 			<nav className="bg-gradient-to-r from-[#000000] to-[#c89116] dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-				<div className="max-w-screen-xl flex flex-wrap items-center justify-between">
+				<div className="flex flex-wrap items-center justify-between">
 					<Link to={"/"} className="flex items-start">
 						<img
 							src={logo}
-							className="lg:mr-12 md:mr-0"
+							className="xlg2:mr-[400px] xlg:mr-[200px] lg:mr-0 md:mr-0"
 							alt="Mitaka Logo"
 							width="200px"
 						/>
@@ -23,7 +23,7 @@ const Navbar = () => {
 							<Link to={"#"}>
 								<button
 									type="button"
-									className="bg-gradient-to-r from-[#52462d] sm:block ss:hidden to-blue-900 h-[50px] hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white lg:font-semibold sm:font-medium py-2 px-4 rounded"
+									className="bg-gradient-to-r from-[#52462d] md:hidden sm:block ss:hidden to-blue-900 h-[50px] hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white lg:font-semibold sm:font-medium py-2 px-4 rounded"
 								>
 									Get a Quote
 								</button>
@@ -52,11 +52,11 @@ const Navbar = () => {
 							</svg>
 						</button>
 					</div>
-					<div
-						className="items-center hidden w-full md:flex md:w-auto md:order-1"
+					{/* <div
+						className="items-center w-full md:flex md:w-auto md:order-1"
 						id="navbar-sticky"
-					>
-						<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row sm:space-x-4 lg:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+					> */}
+						<ul className="md:flex flex-col ss:hidden p-4 md:p-0 mt-4 font-medium md:flex-row sm:space-x-4 lg:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
 							<li>
 								<Link
 									to={"/"}
@@ -107,7 +107,7 @@ const Navbar = () => {
 								</Link>
 							</li>
 						</ul>
-					</div>
+					{/* </div> */}
 				</div>
 			</nav>
 		</div>
