@@ -2,7 +2,7 @@ import React from "react";
 import Announcement from "../../component/Announcement/Announcement";
 import Navbar from "../../component/Navbar/Navbar";
 
-const Services = () => {
+const Projects = () => {
 	return (
 		<>
 			<Announcement />
@@ -14,4 +14,4 @@ const Services = () => {
 	);
 };
 
-export default Services;
+export default Projects;

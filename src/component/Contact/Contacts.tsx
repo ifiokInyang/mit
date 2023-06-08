@@ -1,8 +1,16 @@
 import React from "react";
+import Announcement from "../../component/Announcement/Announcement";
+import Navbar from "../../component/Navbar/Navbar";
 
 const Contacts = () => {
 	return (
-		<div className="text-[30px] mb-40">This page is under construction</div>
+		<>
+			<Announcement />
+			<Navbar />
+			<div className="text-[30px] mt-[60px]">
+				This page is under construction
+			</div>
+		</>
 	);
 };
 
