@@ -56,57 +56,57 @@ const Navbar = () => {
 						className="items-center w-full md:flex md:w-auto md:order-1"
 						id="navbar-sticky"
 					> */}
-						<ul className="md:flex flex-col ss:hidden p-4 md:p-0 mt-4 font-medium md:flex-row sm:space-x-4 lg:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-							<li>
-								<Link
-									to={"/"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base sm:text-base text-white bg-blue-700 rounded md:bg-transparent md:hover:text-[#f9c151] md:text-[white] hover:-translate-x-1 ease-in-out md:p-0 md:dark:text-blue-500"
-									aria-current="page"
-								>
-									Home
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/about"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-								>
-									About
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/products"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-								>
-									Products
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/services"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-								>
-									Services
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/projects"}
-									className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-								>
-									Projects
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/contact"}
-									className="block py-2 pl-3 pr-4 md:mr-8 lg:mr-0 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-								>
-									Contact
-								</Link>
-							</li>
-						</ul>
+					<ul className="md:flex flex-col ss:hidden p-4 md:p-0 mt-4 font-medium md:flex-row sm:space-x-4 lg:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+						<li>
+							<Link
+								to={"/"}
+								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base sm:text-base text-white bg-blue-700 rounded md:bg-transparent md:hover:text-[#f9c151] md:text-[white] hover:-translate-x-1 ease-in-out md:p-0 md:dark:text-blue-500"
+								aria-current="page"
+							>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link
+								to={"/about"}
+								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+							>
+								About
+							</Link>
+						</li>
+						<li>
+							<Link
+								to={"/products"}
+								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+							>
+								Products
+							</Link>
+						</li>
+						<li>
+							<Link
+								to={"/services"}
+								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+							>
+								Services
+							</Link>
+						</li>
+						<li>
+							<Link
+								to={"/projects"}
+								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+							>
+								Projects
+							</Link>
+						</li>
+						<li>
+							<Link
+								to={"/contact"}
+								className="block py-2 pl-3 pr-4 md:mr-8 lg:mr-0 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 md:hover:bg-transparent hover:-translate-x-1 ease-in-out md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+							>
+								Contact
+							</Link>
+						</li>
+					</ul>
 					{/* </div> */}
 				</div>
 			</nav>
