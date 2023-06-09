@@ -10,7 +10,6 @@ const Chart = () => {
 		<>
 			<Announcement />
 			<Navbar />
-			<Modal />
 			<ChartTable />
 			<Footer />
 		</>
