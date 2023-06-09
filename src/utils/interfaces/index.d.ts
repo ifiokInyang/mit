@@ -13,3 +13,8 @@ export interface ButtonPropsSvg {
 	textTwo?: string | null;
 	condition?: boolean;
 }
+
+export interface ModalProps {
+	showModal: boolean;
+	setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+}

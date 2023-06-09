@@ -1,10 +1,15 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/mitaka-logo-trans.png";
+import Modal from "../Modal/Modal";
 
 const Navbar = () => {
 	const location = useLocation();
+	const [showModal, setShowModal] = React.useState(false);
 
+	const handleOpen = () => {
+		setShowModal(true);
+	};
 	return (
 		<div className="sm:h-[150px] ss:h-[130px]">
 			<nav className="bg-gradient-to-r from-[#000000] to-[#c89116] dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -38,11 +43,12 @@ const Navbar = () => {
 						>
 							<span className="sr-only">Open main menu</span>
 							<svg
-								className="w-6 h-6"
+								className="w-7 h-10"
 								aria-hidden="true"
 								fill="currentColor"
 								viewBox="0 0 20 20"
 								xmlns="http://www.w3.org/2000/svg"
+								onClick={handleOpen}
 							>
 								<path
 									fillRule="evenodd"
@@ -52,6 +58,7 @@ const Navbar = () => {
 							</svg>
 						</button>
 					</div>
+					<Modal showModal={showModal} setShowModal={setShowModal} />
 					{/* <div
 						className="items-center w-full md:flex md:w-auto md:order-1"
 						id="navbar-sticky"
