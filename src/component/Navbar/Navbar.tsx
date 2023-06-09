@@ -43,7 +43,7 @@ const Navbar = () => {
 						>
 							<span className="sr-only">Open main menu</span>
 							<svg
-								className="w-7 h-10"
+								className="ss:w-10 sm:w-7 ss:h-10 sm:h-10"
 								aria-hidden="true"
 								fill="currentColor"
 								viewBox="0 0 20 20"
