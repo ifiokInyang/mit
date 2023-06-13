@@ -5,6 +5,8 @@ import Chat from "./component/Chat/Chat";
 import { override } from "./utils/CSSProps/CssProps";
 import ClipLoader from "react-spinners/ClipLoader";
 import Projects from "./pages/Projects/Projects";
+import Announcement from "./component/Announcement/Announcement";
+import Navbar from "./component/Navbar/Navbar";
 
 const Chart = lazy(async () => await import("./pages/Chart/Chart"));
 
@@ -53,6 +55,8 @@ function App() {
 			<Suspense
 				fallback={
 					<div>
+						<Announcement />
+						<Navbar />
 						<ClipLoader
 							color={"blue"}
 							loading={true}

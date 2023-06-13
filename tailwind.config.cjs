@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Corsa-Grotesk': 'Corsa Grotesk'
+        'Corsa-Grotesk': 'Corsa Grotesk',
       },
       colors: {
         brand: {
