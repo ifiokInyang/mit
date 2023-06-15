@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import battery from "../../assets/battery.png";
 import efficiency from "../../assets/energy-efficiency.png";
 import warranty from "../../assets/ten-year.png";
 import Button from "../Button/ButtonSvg";
+import battery from "../../assets/mitaka-battery.webp";
 
 const Benefits = () => {
 	const [isExpanded, setIsExpanded] = useState([false, false, false]);
@@ -106,11 +106,12 @@ const Benefits = () => {
 				</div>
 
 				{/* Section 3 */}
-				<div className="lg:max-w-sm md:max-w-[350px] mt-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+				<div className="lg:max-w-sm md:max-w-[350px] px-8 pt-[48px] mt-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 					<img
-						className="rounded-t-lg mb-8"
+						className="rounded-t-lg pb-[58px] h-[300px] object-cover"
 						src={battery}
-						alt="battery-image"
+						alt="mitaka battery-image"
+						width={"400px"}
 					/>
 
 					<div className="p-5">
