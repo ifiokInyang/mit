@@ -18,3 +18,20 @@ export interface ModalProps {
 	showModal: boolean;
 	setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export interface IFormProps {
+	firstName: string;
+	lastName: string;
+	email: string;
+	company: string;
+	phone: string;
+	address: string;
+	bulb: string | number;
+	fan: string | number;
+	tv: string | number;
+	computer: string | number;
+	refrigerator: string | number;
+	freezer: string | number;
+	ac: string | number;
+	otherLoads: string | undefined;
+}
