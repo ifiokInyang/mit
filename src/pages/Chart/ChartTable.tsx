@@ -5,7 +5,10 @@ import "./Chart.css";
 
 const ChartTable = () => {
 	return (
-		<div className="tableContainer">
+		<div
+			className="tableContainer"
+			style={{ background: "linear-gradient(to bottom, #593e02, #faa805)"}}
+		>
 			<table>
 				<caption className="tableTitle">
 					Mitaka ESTIMATED Power Requirement Chart

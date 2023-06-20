@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import bgImage from "../../assets/renewable-energy.jpg";
 import Form from "../../component/Form/Form";
 
 const Quote = () => {
@@ -98,16 +97,14 @@ const Quote = () => {
 			<div className="flex flex-col items-center justify-evenly text-base w-full">
 				<div className="lg:space-y-8 ss:space-y-2 md:w-[80vw] ss:w-[90vw]">
 					<h1 className="md:text-[24px] ss:text-[12px] text-white font-bold lg:tracking-widest leading-loose">
-						You can have an idea of your energy needs with our simplified{" "}
+						Didn't find what you were looking for on our{" "}
 						<Link
 							to="/chart"
 							className="text-[red] underline hover:text-[blue]"
 						>
-							Power Chart
-						</Link>
-					</h1>
-					<h1 className="md:text-[24px] ss:text-[12px] text-white font-bold lg:tracking-widest leading-loose">
-						Didn't find what you were looking for? <br />
+							Power Chart?
+						</Link>{" "}
+						<br />
 						Enter your load in the form and we will get back to you shortly.
 					</h1>
 				</div>

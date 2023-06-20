@@ -15,6 +15,7 @@ table {
 .tableTitle{
   font-size: 44px;
   font-weight: bold;
+  color: white;
 }
 
 table caption {
@@ -23,7 +24,7 @@ table caption {
 }
 
 table tr {
-  background-color: #f8f8f8;
+  background-color: rgb(248, 246, 243);
   border: 1px solid #ddd;
   padding: .35em;
 }
