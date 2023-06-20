@@ -1,13 +1,9 @@
 import React from "react";
-import Announcement from "../../component/Announcement/Announcement";
-import Navbar from "../../component/Navbar/Navbar";
 
 const Projects = () => {
 	return (
 		<>
-			<Announcement />
-			<Navbar />
-			<div className="text-[30px] mt-[60px]">
+			<div className="text-[30px] mt-[60px] mb-[500px]">
 				This page is under construction
 			</div>
 		</>

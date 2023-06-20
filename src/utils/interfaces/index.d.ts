@@ -26,12 +26,12 @@ export interface IFormProps {
 	company: string;
 	phone: string;
 	address: string;
-	bulb: string | number;
-	fan: string | number;
-	tv: string | number;
-	computer: string | number;
-	refrigerator: string | number;
-	freezer: string | number;
-	ac: string | number;
+	bulb: string | number | undefined; 
+	fan: string | number | undefined; 
+	tv: string | number | undefined; 
+	computer: string | number | undefined; 
+	refrigerator: string | number | undefined; 
+	freezer: string | number | undefined; 
+	ac: string | number | undefined; 
 	otherLoads: string | undefined;
 }
