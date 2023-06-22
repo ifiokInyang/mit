@@ -94,6 +94,7 @@ const Carousel = () => {
 				<source src={mitakaVideo} type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
+
 			<div className="flex items-center sm:text-[20px] absolute ss:top-10 sm:top-0 left-0 text-white h-[150px] text-base bg-gray-500 bg-opacity-90 w-full">
 				{greeting()}
 			</div>

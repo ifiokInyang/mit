@@ -15,9 +15,8 @@ import partnerEleven from "../../assets/partner-sumitomo.png";
 import partnerTwelve from "../../assets/partner-unitika.png";
 import partnerThirteen from "../../assets/partners-ihi.png";
 import partnerFourteen from "../../assets/partners-mitsubishi.png";
+import partnerFifteen from "../../assets/kawasaki-logo.svg";
 import PartnerVariant from "../FramerMotion/Framer";
-
-// ... import other partner images and animations
 
 const Partners = () => {
 	const [ref, inView] = useInView({
@@ -170,6 +169,14 @@ const Partners = () => {
 					alt="hyundai-company-logo"
 					className="object-contain w-[100px] h-[100px]"
 					variants={PartnerVariant.imgFourteen}
+					initial="hidden"
+					animate={inView ? "show" : "hidden"}
+				/>
+				<motion.img
+					src={partnerFifteen}
+					alt="kawasaki-company-logo"
+					className="object-contain w-[100px] h-[100px]"
+					variants={PartnerVariant.imgFifteen}
 					initial="hidden"
 					animate={inView ? "show" : "hidden"}
 				/>
