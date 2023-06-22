@@ -290,6 +290,26 @@ const imgFourteen = {
 		},
 	},
 };
+
+const imgFifteen = {
+	hidden: {
+		opacity: 0,
+		y: "400px",
+		x: "50px",
+		width: "80px",
+	},
+	show: {
+		opacity: 1,
+		y: 0,
+		x: 0,
+		width: "250px",
+		transition: {
+			duration: 1,
+			delay: 1.5,
+			ease: "easeInOut",
+		},
+	},
+};
 export default {
 	typingContainer,
 	typingText,
@@ -307,5 +327,6 @@ export default {
 	imgTwelve,
 	imgThirteen,
 	imgFourteen,
+	imgFifteen,
 	partnerContainer,
 };
