@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import mitakaVideo from "../../assets/mitaka-home-video.mp4";
+import mitakaVideo from "../../assets/mitaka-video.mp4";
 import { motion } from "framer-motion";
 import NavbarVariant from "../FramerMotion/Framer";
 import ClipLoader from "react-spinners/ClipLoader";
