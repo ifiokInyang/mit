@@ -57,7 +57,13 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li className="mb-4">
-									<Link to={"#"} className="hover:underline text-[white]">
+									<Link
+										to={
+											"https://www.facebook.com/profile.php?id=100093271587783&mibextid=ZbWKwL"
+										}
+										target="_blank"
+										className="hover:underline text-[white]"
+									>
 										Facebook
 									</Link>
 								</li>
@@ -96,8 +102,11 @@ const Footer = () => {
 							Reserved.
 						</span>
 						<div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-							<a
-								href="#"
+							<Link
+								to={
+									"https://www.facebook.com/profile.php?id=100093271587783&mibextid=ZbWKwL"
+								}
+								target="_blank"
 								className="text-[white] hover:text-blue-500 dark:hover:text-white"
 							>
 								<svg
@@ -113,9 +122,13 @@ const Footer = () => {
 									/>
 								</svg>
 								<span className="sr-only">Facebook page</span>
-							</a>
-							<a
-								href="#"
+							</Link>
+
+							<Link
+								to={
+									"https://instagram.com/mitakatradeafrica?igshid=MjAxZDBhZDhlNA=="
+								}
+								target="_blank"
 								className="text-[white] hover:text-[#d62976] dark:hover:text-white"
 							>
 								<svg
@@ -131,7 +144,26 @@ const Footer = () => {
 									/>
 								</svg>
 								<span className="sr-only">Instagram page</span>
-							</a>
+							</Link>
+							<Link
+								to={"https://www.linkedin.com/company/mitaka-trade-africa/"}
+								target="_blank"
+								className="text-[white] hover:text-blue-500 dark:hover:text-white"
+							>
+								<svg
+									className="w-5 h-5"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										fillRule="evenodd"
+										d="M2.75 1.5a1.25 1.25 0 011.25-1.25h16.5a1.25 1.25 0 011.25 1.25v16.5a1.25 1.25 0 01-1.25 1.25h-16.5a1.25 1.25 0 01-1.25-1.25v-16.5zm6.016 18.56V9.126H5.828v10.934h2.938zm-1.469-12.5a1.859 1.859 0 11-.044-3.717 1.859 1.859 0 01.044 3.717zm12.5 12.5h-2.937v-5.59c0-1.401-.027-3.197-1.953-3.197-1.953 0-2.252 1.527-2.252 3.1v5.687h-2.937v-10.934h2.79v1.648h.04c.386-.733 1.328-1.503 2.753-1.503 2.94 0 3.47 1.931 3.47 4.443v6.346z"
+										clipRule="evenodd"
+									/>
+								</svg>
+								<span className="sr-only">LinkedIn page</span>
+							</Link>
 							<a
 								href="#"
 								className="text-[white] hover:text-blue-500 dark:hover:text-white"

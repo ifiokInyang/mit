@@ -89,22 +89,14 @@ const Navbar = () => {
 								Products
 							</Link>
 						</li>
-						<li>
-							<Link
-								to={"/services"}
-								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-							>
-								Services
-							</Link>
-						</li>
-						<li>
+						{/* <li>
 							<Link
 								to={"/projects"}
 								className="block py-2 pl-3 pr-4 lg:text-xl sm:text-base text-[white] rounded hover:bg-gray-100 hover:-translate-x-1 ease-in-out md:hover:bg-transparent md:hover:text-[#f9c151] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 							>
 								Projects
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link
 								to={"/contact"}

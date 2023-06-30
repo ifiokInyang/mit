@@ -26,12 +26,20 @@ export interface IFormProps {
 	company: string;
 	phone: string;
 	address: string;
-	bulb: string | number | undefined; 
-	fan: string | number | undefined; 
-	tv: string | number | undefined; 
-	computer: string | number | undefined; 
-	refrigerator: string | number | undefined; 
-	freezer: string | number | undefined; 
-	ac: string | number | undefined; 
+	bulb: string | number | undefined;
+	fan: string | number | undefined;
+	tv: string | number | undefined;
+	computer: string | number | undefined;
+	refrigerator: string | number | undefined;
+	freezer: string | number | undefined;
+	ac: string | number | undefined;
 	otherLoads: string | undefined;
+}
+
+export interface IRowData {
+	id: number;
+	selectedValue: string;
+	watts: undefined | number;
+	hours: undefined | number;
+	quantity: undefined | number;
 }
