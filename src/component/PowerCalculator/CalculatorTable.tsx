@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styles } from "../CustomStyles/CustomStyles";
 import "../../pages/Chart/Chart.css";
 import { IRowData } from "../../utils/interfaces";
-import { fillInput } from "./CalculatorFunc";
+import { fillDynamicRow, fillInput } from "./CalculatorFunc";
 
 const CalculatorTable = () => {
 	const [selectedValue, setSelectedValue] = useState("");
@@ -10,6 +10,8 @@ const CalculatorTable = () => {
 	const [hours, setHours] = useState<number>();
 	const [quantity, setQuantity] = useState<number>();
 	const [rows, setRows] = useState<IRowData[]>([]);
+	const [isPower, setIspower] = useState<boolean>(false);
+	const [load, setLoad] = useState<string>("");
 
 	const handleAddRow = () => {
 		const newRow: IRowData = {
@@ -26,6 +28,7 @@ const CalculatorTable = () => {
 			return row.id !== rowId;
 		});
 		setRows(filteredRow);
+		setLoad("");
 	};
 
 	const handleWattsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,6 +44,87 @@ const CalculatorTable = () => {
 	const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = e.target;
 		setQuantity(Number(value));
+	};
+	function handleCalculatePowerUsage() {
+		const Energy =
+			typeof watts === "number" &&
+			typeof hours === "number" &&
+			typeof quantity === "number"
+				? ((watts * hours) / 1000) * quantity
+				: null;
+		const loadArrCalculator =
+			rows.length !== 0
+				? rows.reduce((accum: number, row: IRowData) => {
+						const powerCalc =
+							row.watts !== undefined &&
+							row.hours !== undefined &&
+							row.quantity !== undefined
+								? ((row.watts * row.hours) / 1000) * row.quantity
+								: null;
+						if (powerCalc !== null) {
+							accum += powerCalc;
+						}
+						return accum;
+				  }, 0)
+				: null;
+		console.log("watts is ", watts);
+		setIspower(true);
+		setLoad(
+			watts !== undefined && hours !== undefined && quantity !== undefined
+				? `Your power usage is ${(
+						Number(loadArrCalculator) + Number(Energy)
+				  ).toFixed(1)}KwH`
+				: "Kindly select an appliance"
+		);
+
+		return `${(Number(loadArrCalculator) + Number(Energy)).toFixed(1)}KwH`;
+	}
+
+	const inverterRequirements = (load: string) => {
+		let message = "";
+		const regex = /\d+(\.\d+)?/;
+		const match = load.match(regex);
+		let number;
+
+		if (match != null) {
+			number = parseFloat(match[0]);
+		} else {
+			console.log("No number found in the string.");
+		}
+		if (number !== undefined) {
+			if (number < 0.09) {
+				message = "";
+				return message;
+			}
+			if (number > 0.09 && number <= 0.8) {
+				message = `So you will require ${number}KVa inverter and 1 Mitaka battery`;
+				return message;
+			}
+			if (number > 0.8 && number <= 1.4) {
+				message = `So you will require ${number}KVa inverter and 2 Mitaka batteries`;
+				return message;
+			}
+			if (number > 1.4 && number <= 3.5) {
+				message = `So you will require ${number}KVa inverter and 4 Mitaka batteries`;
+				return message;
+			}
+			if (number > 3.5 && number <= 5.0) {
+				message = `So you will require ${number}KVa inverter and 8 Mitaka batteries`;
+				return message;
+			}
+			if (number > 5.0 && number <= 7.5) {
+				message = `So you will require ${number}KVa inverter and 10 Mitaka batteries`;
+				return message;
+			}
+			if (number > 7.5 && number <= 10) {
+				message = `So you will require ${number}KVa inverter and 15 Mitaka batteries`;
+				return message;
+			}
+			if (number > 10 && number <= 30) {
+				message = `So you will require ${number}KVa inverter and 30 Mitaka batteries`;
+				return message;
+			}
+		}
 	};
 	return (
 		<div>
@@ -76,6 +160,7 @@ const CalculatorTable = () => {
 									const { value } = e.target;
 									setSelectedValue(value);
 									fillInput(value, setWatts, setHours, setQuantity);
+									setLoad("");
 								}}
 							>
 								<optgroup label="rows">
@@ -90,7 +175,7 @@ const CalculatorTable = () => {
 									<option value="Washing Machine">Washing Machine</option>{" "}
 									<option value="Pumping Machine">Pumping Machine</option>{" "}
 									<option value="Microwave Oven">Microwave Oven</option>
-									<option value="Dish washer">Dish Washer</option>
+									<option value="Dish Washer">Dish Washer</option>
 									<option value="Heater">Heater</option>
 									<option value="Laptop Computer">Laptop Computer</option>{" "}
 									<option value="Pressing Iron">Pressing Iron</option>
@@ -112,9 +197,9 @@ const CalculatorTable = () => {
 							/>
 						</td>
 					</tr>
-					{rows.map((row: IRowData) => (
+					{rows.map((row: IRowData, index: number) => (
 						<>
-							<tr key={row.id}>
+							<tr key={index}>
 								<td
 									data-label={"Appliance"}
 									className={`${styles.calculatorTable}`}
@@ -130,6 +215,8 @@ const CalculatorTable = () => {
 												r.id === row.id ? { ...r, selectedValue: value } : r
 											);
 											setRows(updatedRows);
+											fillDynamicRow(value, row, rows, setRows);
+											setLoad("");
 										}}
 									>
 										<optgroup label="rows">
@@ -146,7 +233,7 @@ const CalculatorTable = () => {
 											</option>{" "}
 											<option value="Pumping Machine">Pumping Machine</option>{" "}
 											<option value="Microwave Oven">Microwave Oven</option>
-											<option value="Dish washer">Dish Washer</option>
+											<option value="Dish Washer">Dish Washer</option>
 											<option value="Heater">Heater</option>
 											<option value="Laptop Computer">
 												Laptop Computer
@@ -196,14 +283,44 @@ const CalculatorTable = () => {
 									/>
 								</td>
 							</tr>
-							<button onClick={() => handleRemoveRow(row.id)}>
-								Remove Row
-							</button>
+							<tr>
+								{/* <div> */}
+								<td colSpan={4} className="">
+									<button
+										className="bg-red-600 h-auto w-auto sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
+										onClick={() => handleRemoveRow(row.id)}
+									>
+										Remove Row
+									</button>
+								</td>
+							</tr>
 						</>
 					))}
 				</tbody>
 			</table>
-			<button onClick={handleAddRow}>Add Row</button>
+
+			<button
+				type="button"
+				onClick={handleAddRow}
+				className="bg-blue-700 h-auto w-auto sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
+			>
+				Add Row
+			</button>
+			{isPower && (
+				<div className="flex flex-col justify-center items-center md:text-[38px] ss:text-[20px] font-bold">
+					<p>{load} </p>
+					<p>{inverterRequirements(load)}</p>
+				</div>
+			)}
+			<div className="flex md:justify-center">
+				<button
+					type="button"
+					onClick={handleCalculatePowerUsage}
+					className="bg-gradient-to-r from-[#52462d] to-blue-900 h-[50px] w-auto sm:my-4 ss:my-2 sm:ml-4 ss:ml-0 hover:to-[#f2bf4b] hover:from-blue-700 transition duration-500 delay-150 hover:scale-110 hover:-translate-y-1 ease-in-out text-white font-semibold py-2 px-4 rounded"
+				>
+					Calculate Power Usage
+				</button>
+			</div>
 		</div>
 	);
 };

@@ -1,19 +1,5 @@
-// export const tableData = [
-// 	{
-// 		dataLabel: "Appliance",
-// 		value: 3,
-// 	},
-// 	{
-// 		dataLabel: "Power Rating (Watts)",
-// 		value: 2,
-// 	},
-// 	{
-// 		dataLabel: "Average Daily Usage (Hours)",
-// 		value: 1,
-// 	},
-//     { dataLabel: "Quantity", value: 2 },
+import { IRowData } from "../../utils/interfaces";
 
-// ];
 export const fillInput = (
 	value: string,
 	setWatts: React.Dispatch<React.SetStateAction<number | undefined>>,
@@ -22,7 +8,7 @@ export const fillInput = (
 ) => {
 	if (value === "Refridgerator") {
 		setWatts(300);
-		setHours(7);
+		setHours(8);
 		setQuantity(1);
 	}
 	if (value === "TV") {
@@ -94,5 +80,223 @@ export const fillInput = (
 		setWatts(2000);
 		setHours(3);
 		setQuantity(1);
+	}
+};
+
+export const fillDynamicRow = (
+	value: string,
+	row: IRowData,
+	rows: IRowData[],
+	setRows: React.Dispatch<React.SetStateAction<IRowData[]>>
+) => {
+	if (value === "Refridgerator") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 300,
+						hours: 8,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "TV") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 70,
+						hours: 10,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Air Conditioner") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 600,
+						hours: 8,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Cloth Dryer") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 3000,
+						hours: 4,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Desktop Computer") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 100,
+						hours: 8,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Freezer") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 200,
+						hours: 20,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Fan") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 70,
+						hours: 8,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Washing Machine") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 2000,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Pumping Machine") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 735,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Microwave Oven") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 800,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Dish Washer") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 1600,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Heater") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 2000,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Laptop Computer") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 80,
+						hours: 10,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Pressing Iron") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 2000,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
+	}
+	if (value === "Electric Kettle") {
+		const updatedRows = rows.map((r) =>
+			r.id === row.id
+				? {
+						...r,
+						selectedValue: value,
+						watts: 2000,
+						hours: 3,
+						quantity: 1,
+				  }
+				: r
+		);
+		setRows(updatedRows);
 	}
 };
