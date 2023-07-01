@@ -3,6 +3,7 @@ import contactImg from "../../assets/contact-us.jpeg";
 import { HiBuildingOffice } from "react-icons/hi2";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
 	return (
@@ -11,8 +12,11 @@ const Contact = () => {
 			<div className="flex justify-center items-center flex-wrap py-8 bg-gradient-to-b from-[#000000] to-[#faa805] w-full h-auto">
 				<div className="md:w-[150px] ss:w-full md:h-[450px] ss:h-[100px] bg-slate-700 md:order-1 ss:order-3">
 					<div className="flex md:flex-col items-center justify-around h-full py-12">
-						<a
-							href="#"
+						<Link
+							to={
+								"https://www.facebook.com/profile.php?id=100093271587783&mibextid=ZbWKwL"
+							}
+							target="_blank"
 							className="text-[white] hover:text-blue-500 dark:hover:text-white"
 						>
 							<svg
@@ -28,9 +32,12 @@ const Contact = () => {
 								/>
 							</svg>
 							<span className="sr-only">Facebook page</span>
-						</a>
-						<a
-							href="#"
+						</Link>
+						<Link
+							to={
+								"https://instagram.com/mitakatradeafrica?igshid=MjAxZDBhZDhlNA=="
+							}
+							target="_blank"
 							className="text-[white] hover:text-[#d62976] dark:hover:text-white"
 						>
 							<svg
@@ -46,7 +53,7 @@ const Contact = () => {
 								/>
 							</svg>
 							<span className="sr-only">Instagram page</span>
-						</a>
+						</Link>
 						<a
 							href="#"
 							className="text-[white] hover:text-blue-500 dark:hover:text-white"
@@ -61,8 +68,9 @@ const Contact = () => {
 							</svg>
 							<span className="sr-only">Twitter page</span>
 						</a>
-						<a
-							href="#"
+						<Link
+							to={"https://www.linkedin.com/company/mitaka-trade-africa/"}
+							target="_blank"
 							className="text-[white] hover:text-blue-500 dark:hover:text-white"
 						>
 							<svg
@@ -77,9 +85,8 @@ const Contact = () => {
 									clipRule="evenodd"
 								/>
 							</svg>
-
 							<span className="sr-only">LinkedIn page</span>
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div
