@@ -67,7 +67,6 @@ const CalculatorTable = () => {
 						return accum;
 				  }, 0)
 				: null;
-		console.log("watts is ", watts);
 		setIspower(true);
 		setLoad(
 			watts !== undefined && hours !== undefined && quantity !== undefined
@@ -122,6 +121,10 @@ const CalculatorTable = () => {
 			}
 			if (number > 10 && number <= 30) {
 				message = `So you will require ${number}KVa inverter and 30 Mitaka batteries`;
+				return message;
+			}
+			if (number > 30) {
+				message = `Your load exceeds a 30KVa inverter capacity, kindly contact support on +234(0)803-838-4141, +234(0)706-470-3021 for a proper energy audit.`;
 				return message;
 			}
 		}
