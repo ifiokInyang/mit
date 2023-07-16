@@ -3,7 +3,7 @@ import "./Chat.css";
 
 const Chat = () => {
 	return (
-		<div className="fixed bottom-5 left-3 z-50">
+		<div className="fixed bottom-5 left-3 md:z-50">
 			<div className="flex justify-end">
 				<a
 					href="https://api.whatsapp.com/send/?phone=2348038384141&text&type=phone_number&app_absent=0"
