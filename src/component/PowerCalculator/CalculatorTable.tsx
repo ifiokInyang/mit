@@ -116,10 +116,18 @@ const CalculatorTable = () => {
 				return message;
 			}
 			if (number > 7.5 && number <= 10) {
-				message = `So you will require ${number}KVa inverter and 15 Mitaka batteries`;
+				message = `So you will require ${number}KVa inverter and 12 Mitaka batteries`;
 				return message;
 			}
-			if (number > 10 && number <= 30) {
+			if (number > 10 && number <= 15) {
+				message = `So you will require ${number}KVa inverter and 18 Mitaka batteries`;
+				return message;
+			}
+			if (number > 15 && number <= 20) {
+				message = `So you will require ${number}KVa inverter and 24 Mitaka batteries`;
+				return message;
+			}
+			if (number > 20 && number <= 30) {
 				message = `So you will require ${number}KVa inverter and 30 Mitaka batteries`;
 				return message;
 			}
