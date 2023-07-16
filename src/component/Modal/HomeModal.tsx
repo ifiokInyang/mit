@@ -1,22 +1,35 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { ModalProps } from "../../utils/interfaces";
 import homeImg from "../../assets/home-img.png";
-import Button from "../Button/Button";
+import { apiPost } from "../../utils/api/axios";
 
 export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 	const [name, setName] = useState<string>("");
 	const [phone, setPhone] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
 	const [error, setError] = useState<string>("");
+	const [isLoading, setIsLoading] = useState<boolean>(true);
 
-	const handleSubmit = (e: any) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (phone.length < 8) {
 			return setError("phone number must not be less than 8 digits");
 		} else {
 			setShowModal(false);
 		}
+		const data = {
+			fName: name,
+			phone,
+			email,
+		};
+		try {
+			await apiPost("/api/users/add-user", data);
+        } catch (error) {
+            console.log("Something went wrong..")
+        }
+	};
+	const handleImageLoad = () => {
+		setIsLoading(false);
 	};
 	return (
 		<>
@@ -24,11 +37,18 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 				<div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
 					<div className="bg-white md:w-[50%] ss:w-[80%] rounded-lg relative">
 						<div className="relative w-full h-auto">
-							{" "}
+							{isLoading && (
+								<div className="flex items-center justify-center w-full h-[380px] bg-gray-100">
+									<div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-500"></div>
+								</div>
+							)}
 							<img
 								src={homeImg}
 								alt="mitaka battery with warranty and discount"
-								className="w-full ss:h-auto lg:h-[380px] object-cover rounded-t-md"
+								className={`w-full ss:h-auto lg:h-[380px] object-cover rounded-t-md bg-[#d4af37] ${
+									isLoading ? "hidden" : ""
+								}`}
+								onLoad={handleImageLoad}
 							/>
 							<div className="absolute md:top-2 ss:top-0 left-0 bg-[black] mt-1 ss:mx-2 md:mx-0 lg:mx-8 text-white py-2 px-2 rounded-full ss:text-sm md:text-[28px] font-medium">
 								20% OFF
@@ -57,6 +77,7 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 										className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 										placeholder=" "
 										onChange={(e) => setName(e.target.value)}
+										required
 									/>
 									<label
 										htmlFor="floating_first_name"
@@ -67,7 +88,7 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 								</div>
 								<div className="relative z-0 w-full mb-6 group">
 									<input
-										type="tel"
+										type="number"
 										// pattern="[+]{1}[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
 										name="floating_phone"
 										id="floating_phone"
