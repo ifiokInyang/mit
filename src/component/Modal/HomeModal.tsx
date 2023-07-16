@@ -34,7 +34,7 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 	return (
 		<>
 			{showModal && (
-				<div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+				<div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-40">
 					<div className="bg-white md:w-[50%] ss:w-[80%] rounded-lg relative">
 						<div className="relative w-full h-auto">
 							{isLoading && (
@@ -63,7 +63,7 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 								×
 							</span>
 						</button>
-						<p className="px-4 text-red-800 md:font-bold md:text-[20px] ss:text-[16px] ss:font-normal md:tracking-wider ss:tracking-normal">
+						<p className="px-4 text-red-800 font-bold md:text-[20px] ss:text-[16px] md:tracking-wider ss:tracking-normal">
 							Be the first to know of our best deals and offers!!!
 						</p>
 						<form className="p-4" onSubmit={handleSubmit}>
