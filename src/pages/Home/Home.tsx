@@ -10,7 +10,10 @@ const Home = () => {
 	const [show, setShow] = useState<boolean>(false);
 
 	useEffect(() => {
-		setShow(true);
+		setTimeout(() => {
+
+			setShow(true);
+		}, 7000)
 	}, []);
 
 	return (
