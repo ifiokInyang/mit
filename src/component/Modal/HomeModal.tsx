@@ -51,7 +51,7 @@ export default function HomeModal({ showModal, setShowModal }: ModalProps) {
 								onLoad={handleImageLoad}
 							/>
 							<div className="absolute md:top-2 ss:top-0 left-0 bg-[black] mt-1 ss:mx-2 md:mx-0 lg:mx-8 text-white py-2 px-2 rounded-full ss:text-sm md:text-[28px] font-medium">
-								20% OFF
+								30% OFF
 							</div>
 						</div>
 
