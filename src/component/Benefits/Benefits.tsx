@@ -4,7 +4,7 @@ import warranty from "../../assets/ten-year.png";
 import Button from "../Button/ButtonSvg";
 import battery from "../../assets/mitaka-battery.webp";
 
-const Benefits = () => {
+const Benefits: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState([false, false, false]);
 
 	const handleToggle = (index: number) => {
@@ -114,7 +114,7 @@ const Benefits = () => {
 						width={"400px"}
 					/>
 
-					<div className="p-5">
+					<div className="">
 						<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
 							Sulfation Prevention and Performance{" "}
 						</h5>

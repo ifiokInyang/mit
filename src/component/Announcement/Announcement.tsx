@@ -14,7 +14,7 @@ const Announcement = () => {
 				<div className="inline-flex items-center font-bold px-8">
 					{" "}
 					<BsFillTelephoneFill />
-					<p className="ml-2">+234 803 838 4141</p>
+					<p className="ml-2">+234 703 519 7468</p>
 				</div>
 				<div className="flex align-center font-bold items-center">
 					<MdEmail />

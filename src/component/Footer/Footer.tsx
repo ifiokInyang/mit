@@ -38,7 +38,7 @@ const Footer = () => {
 									3B Oko Awo Street, Victoria Island Lagos, Nigeria
 								</li>
 								<li className="mb-4 text-[white]">
-									+234 913 612 6191 <br /> +234 803 838 4141 <br />
+									+234 913 612 6191 <br /> +234 703 519 7468 <br />
 									+44 7533 371 203
 								</li>
 								<li className="mb-4 md:text-lg ss:text-[12px] text-[white]">
