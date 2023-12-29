@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import partnerOne from "../../assets/partner-australis.png";
@@ -17,11 +17,13 @@ import partnerThirteen from "../../assets/partners-ihi.png";
 import partnerFourteen from "../../assets/partners-mitsubishi.png";
 import partnerFifteen from "../../assets/kawasaki-logo.svg";
 import PartnerVariant from "../FramerMotion/Framer";
+import HomeModal from "../Modal/HomeModal";
 
 const Partners = () => {
 	const [ref, inView] = useInView({
 		threshold: 0.1,
 	});
+	const [show, setShow] = useState<boolean>(false);
 
 	const message =
 		"Our synergy of success lies in our partnerships with top brands to meet their energy needs.";
@@ -30,6 +32,7 @@ const Partners = () => {
 		if (inView) {
 			// Perform any actions when the element comes into view
 			// console.log("it is in view");
+			setShow(true);
 		}
 	}, [inView]);
 
@@ -181,6 +184,7 @@ const Partners = () => {
 					animate={inView ? "show" : "hidden"}
 				/>
 			</div>
+			{show && <HomeModal showModal={show} setShowModal={setShow} />}
 		</div>
 	);
 };

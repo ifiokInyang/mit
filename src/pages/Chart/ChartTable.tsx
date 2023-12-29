@@ -388,7 +388,7 @@ const ChartTable = () => {
 				estates, hospitals, hotels, supermarkets, etc.
 			</p>
 			<p className="mt-8 font-medium text-[24px]">
-				Call our 24/7 Customer Support on +234(0)803-838-4141,
+				Call our 24/7 Customer Support on +234(0)703-519-7468,
 				+234(0)706-470-3021.
 			</p>
 		</div>

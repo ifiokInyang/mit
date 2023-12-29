@@ -6,7 +6,7 @@ const Chat = () => {
 		<div className="fixed bottom-5 left-3 md:z-50">
 			<div className="flex justify-end">
 				<a
-					href="https://api.whatsapp.com/send/?phone=2348038384141&text&type=phone_number&app_absent=0"
+					href="https://api.whatsapp.com/send/?phone=2347035197468&text&type=phone_number&app_absent=0"
 					target="_blank"
 					// className="bg-[#25D366] px-4 py-2 flex items-center text-white md:text-[24px] rounded-full relative"
 					rel="noreferrer"
